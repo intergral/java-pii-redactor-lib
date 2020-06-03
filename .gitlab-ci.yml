@@ -14,7 +14,7 @@ branch_build:
   except:
     - tags
   script:
-    - mvn clean verify
+    - mvn -s .ci_settings.xml clean verify
 
 tag_build:
   stage: build
@@ -22,5 +22,5 @@ tag_build:
   only:
     - tags
   script:
-    - mvn -s ci_settings.xml versions:set -DnewVersion=${CI_COMMIT_TAG}
+    - mvn -s .ci_settings.xml versions:set -DnewVersion=${CI_COMMIT_TAG}
     - mvn -s .ci-settings.xml clean deploy -p release-ossrh
