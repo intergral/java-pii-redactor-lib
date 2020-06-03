@@ -10,7 +10,7 @@ stages:
 
 branch_build:
   stage: build
-  image: registry.gitlab.com/intergral/docker/build-images/maven-3:gpg-java-7
+  image: maven:3-jdk-7
   except:
     - tags
   script:
@@ -18,7 +18,7 @@ branch_build:
 
 tag_build:
   stage: build
-  image: registry.gitlab.com/intergral/docker/build-images/maven-3:gpg-java-7
+  image: registry.gitlab.com/intergral/docker/build-images/maven-3:external-gpg-java-7
   only:
     - tags
   script:
