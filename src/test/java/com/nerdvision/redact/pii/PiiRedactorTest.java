@@ -6,15 +6,13 @@ import static org.junit.Assert.*;
 
 public class PiiRedactorTest
 {
-
-
     private PiiRedactor piiRedactor;
 
 
     @Before
     public void setUp() throws Exception
     {
-        piiRedactor = new PiiRedactor();
+        piiRedactor = PiiRedactor.getInstance();
     }
 
 

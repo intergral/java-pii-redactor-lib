@@ -10,6 +10,11 @@ import java.util.Set;
 
 public class WellKnownNames
 {
+    private WellKnownNames()
+    {
+    }
+
+
     static Set<String> NAMES;
 
     static
