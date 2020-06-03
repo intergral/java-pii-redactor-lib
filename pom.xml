@@ -153,9 +153,6 @@
                         <phase>package</phase>
                         <configuration>
                             <encoding>UTF-8</encoding>
-                            <additionalOptions>
-                                <additionalOption>-html5</additionalOption>
-                            </additionalOptions>
                         </configuration>
                     </execution>
                 </executions>
