@@ -16,7 +16,17 @@
 
 package com.nerdvision.redact.pii;
 
+/**
+ * This defines the interface for the redactor.
+ */
 public interface ISyncRedactor
 {
+    /**
+     * This will redact the input text and return the string with the redacted text.
+     *
+     * @param textToRedact the text string to redact
+     *
+     * @return the redacted string
+     */
     String redact( final String textToRedact );
 }

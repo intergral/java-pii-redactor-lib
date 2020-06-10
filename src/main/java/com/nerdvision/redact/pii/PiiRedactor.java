@@ -25,8 +25,13 @@ import com.nerdvision.redact.pii.regex.URLRedactor;
 import com.nerdvision.redact.pii.regex.ZIPCodeRedactor;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
+/**
+ * This is the main Redactor type that should be used to perform the redaction.
+ *
+ * @author bdonnell
+ * @see #getInstance()
+ */
 public class PiiRedactor implements ISyncRedactor
 {
     private static final PiiRedactor INSTANCE = new PiiRedactor();
@@ -44,12 +49,24 @@ public class PiiRedactor implements ISyncRedactor
     }};
 
 
+    /**
+     * Get the instance of this redactor
+     *
+     * @return {@link #INSTANCE}
+     */
     public static PiiRedactor getInstance()
     {
         return INSTANCE;
     }
 
 
+    /**
+     * Redact the text based on this redactors config
+     *
+     * @param textToRedact the text string to redact
+     *
+     * @return the redacted text
+     */
     public String redact( String textToRedact )
     {
         for( ISyncRedactor redactor : REDACTORS )
