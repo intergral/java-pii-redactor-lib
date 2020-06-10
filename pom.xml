@@ -23,6 +23,19 @@ limitations under the License.
     <artifactId>redact-pii</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>PII Redaction Lib</name>
+    <description>A library to help with redacting PII data in Java</description>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <url>https://github.com/intergral/java-pii-redactor-lib</url>
+    <scm>
+        <url>https://github.com/intergral/java-pii-redactor-lib</url>
+    </scm>
+
     <properties>
         <!-- Some things just cannot be tested -->
         <allowed.coverage>0.85</allowed.coverage>

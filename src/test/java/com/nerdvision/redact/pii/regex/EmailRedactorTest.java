@@ -37,10 +37,10 @@ public class EmailRedactorTest
     @Test
     public void emailRedactor()
     {
-        assertEquals( "my email is EMAIL_ADDRESS.", emailRedactor.redact( "my email is ben@nerd.vision." ) );
-        assertEquals( "my email is EMAIL_ADDRESS.", emailRedactor.redact( "my email is ben@googlemail.com." ) );
-        assertEquals( "my email is EMAIL_ADDRESS.", emailRedactor.redact( "my email is ben@nerdviion.io." ) );
-        assertEquals( "my email is EMAIL_ADDRESS.", emailRedactor.redact( "my email is ben_donnelly+somefilter@nerdviion.io." ) );
-        assertEquals( "my email is EMAIL_ADDRESS.", emailRedactor.redact( "my email is b.e.n_d_o_n_n_e_l_l.y+somefilter@nerdviion.io." ) );
+        assertEquals( "my email is EMAIL_ADDRESS.", emailRedactor.redact( "my email is asdasd@nerd.vision." ) );
+        assertEquals( "my email is EMAIL_ADDRESS.", emailRedactor.redact( "my email is asdasdsad@googlemail.com." ) );
+        assertEquals( "my email is EMAIL_ADDRESS.", emailRedactor.redact( "my email is asdasdsad@nerdviion.io." ) );
+        assertEquals( "my email is EMAIL_ADDRESS.", emailRedactor.redact( "my email is asdasdsad_donnelly+somefilter@nerdviion.io." ) );
+        assertEquals( "my email is EMAIL_ADDRESS.", emailRedactor.redact( "my email is a.s.d_d_d_f_e_r_g_e.y+somefilter@nerdviion.io." ) );
     }
 }
