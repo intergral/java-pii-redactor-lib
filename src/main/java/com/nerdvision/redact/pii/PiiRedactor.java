@@ -1,3 +1,19 @@
+/*
+ Copyright [2020] [Intergral GmbH]
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
 package com.nerdvision.redact.pii;
 
 import com.nerdvision.redact.pii.regex.CreditCardRedactor;
@@ -9,8 +25,13 @@ import com.nerdvision.redact.pii.regex.URLRedactor;
 import com.nerdvision.redact.pii.regex.ZIPCodeRedactor;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
+/**
+ * This is the main Redactor type that should be used to perform the redaction.
+ *
+ * @author bdonnell
+ * @see #getInstance()
+ */
 public class PiiRedactor implements ISyncRedactor
 {
     private static final PiiRedactor INSTANCE = new PiiRedactor();
@@ -28,12 +49,24 @@ public class PiiRedactor implements ISyncRedactor
     }};
 
 
+    /**
+     * Get the instance of this redactor
+     *
+     * @return {@link #INSTANCE}
+     */
     public static PiiRedactor getInstance()
     {
         return INSTANCE;
     }
 
 
+    /**
+     * Redact the text based on this redactors config
+     *
+     * @param textToRedact the text string to redact
+     *
+     * @return the redacted text
+     */
     public String redact( String textToRedact )
     {
         for( ISyncRedactor redactor : REDACTORS )
